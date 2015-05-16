@@ -1,8 +1,8 @@
 # Nightly archives are at: http://static.rust-lang.org/dist/index.html
 
-# Runs all the benchmarking for a single downloaded nightly for SRC_DATE
+# Runs all the benchmarking for a single downloaded nightly for SRC_DATE (the first arg)
 
-SRC_DATE=2015-05-13
+SRC_DATE=$1
 
 TIMES_DIR=/root/times
 BENCH_DIR=/root/benchmarks
