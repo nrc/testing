@@ -56,7 +56,7 @@ cd $BENCH_DIR
 echo "committing"
 cd $TIMES_DIR
 git commit -m "Added data for nightly $SRC_DATE"
-git push origin master
+git push upstream master
 
 echo "tidying up"
 cd $START

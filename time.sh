@@ -44,4 +44,4 @@ cd $BENCH_DIR
 echo "committing"
 cd $TIMES_DIR
 git commit -m "Added data for $DATE"
-git push origin master
+git push upstream master
