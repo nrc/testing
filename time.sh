@@ -12,6 +12,16 @@ echo "pulling master ($DATE)"
 git checkout master
 git pull origin master
 
+# write the commit-stamp
+mv nrc.stamp nrc.stamp.old
+git log -1 --format="%H" >nrc.stamp
+while cmp -s nrc.stamp nrc.stamp.old
+do
+    echo "sleeping"
+    sleep 1h
+    git pull upstream master
+done
+
 echo "building"
 
 ./configure
