@@ -12,7 +12,8 @@ for dir in *; do
         cd $dir
         for i in 0 1 2 3 4 5
         do
-            rustc --version >$TIMES_DIR/raw/$dir--$DATE--$i.log
+            echo "commit 000000\n" >$TIMES_DIR/raw/$dir--$DATE--$i.log
+            echo "Date:   $DATE" >>$TIMES_DIR/raw/$dir--$DATE--$i.log
             echo "rustc: ./$dir" >>$TIMES_DIR/raw/$dir--$DATE--$i.log
             make >>$TIMES_DIR/raw/$dir--$DATE--$i.log
             echo "done" >>$TIMES_DIR/raw/$dir--$DATE--$i.log
